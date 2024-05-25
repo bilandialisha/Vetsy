@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Report Card</title>
+    <link rel="stylesheet" href="report.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="loading.css">
+</head>
+<body onload="setTimeout(myFunction,3000);">
+    <div id="loading" style="position: fixed; top:0%; z-index: 10000;">
+        <div class="wrapper">
+            <div class="box-wrap">
+                <div class="box one"></div>
+                <div class="box two"></div>
+                <div class="box three"></div>
+                <div class="box four"></div>
+                <div class="box five"></div>
+                <div class="box six"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <a href="#" class="logo" alt=""><img src="logo.png" alt=""></a>
+        <nav class="navbar">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#about">About</a>
+            <a href="book.html">Book</a>
+            <a href="index.html#blogs">Blogs</a>
+            <a href="loginsignup.html">Sign-up</a>
+        </nav>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+    </header>
+
+    <section class="card">
+    <div class="container">
+        <h1 class="heading">Pet <span>Report Card</span></h1>
+        <div class="pet-info">
+            <h2>Pet Name: <span id="petName">Max</span></h2>
+            <p>Age: <span id="petAge">5 years</span></p>
+            <p>Weight: <span id="petWeight">10 kg</span></p>
+            <p>Vaccinations: <span id="vaccinations">Up to date</span></p>
+            <p>Medications: <span id="medications">None</span></p>
+            <p>Notes: <span id="notes">Healthy and active</span></p>
+            <button class="btnn1">Edit Profile<span class="fas fa-chevron-right"></span></button>
+            <h2>Physical Exam Checklist:</h2>
+            <ul id="physicalExamList">
+                <li data-item="generalAppearance"><span>General appearance:</span> <br>
+                    <label><input type="radio" name="generalAppearance" value="Normal" checked> Normal</label>
+                    <label><input type="radio" name="generalAppearance" value="Not Evaluated"> Not Evaluated</label>
+                    <label><input type="radio" name="generalAppearance" value="Abnormal"> Abnormal</label>
+                </li>
+                <li data-item="oralTeeth"><span>Oral cavity/teeth: </span><br>
+                    <label><input type="radio" name="oralTeeth" value="Normal" checked> Normal</label>
+                    <label><input type="radio" name="oralTeeth" value="Not Evaluated"> Not Evaluated</label>
+                    <label><input type="radio" name="oralTeeth" value="Abnormal"> Abnormal</label>
+                </li>
+                <li data-item="neurological"><span>Neurological:</span> <br>
+                    <label><input type="radio" name="neurological" value="Normal" checked> Normal</label>
+                    <label><input type="radio" name="neurological" value="Not Evaluated"> Not Evaluated</label>
+                    <label><input type="radio" name="neurological" value="Abnormal"> Abnormal</label>
+                </li>
+                <li data-item="eyes"><span>Eyes:</span> <br>
+                    <label><input type="radio" name="eyes" value="Normal" checked> Normal</label>
+                    <label><input type="radio" name="eyes" value="Not Evaluated"> Not Evaluated</label>
+                    <label><input type="radio" name="eyes" value="Abnormal"> Abnormal</label>
+                </li>
+                <li data-item="ears"><span>Ears:</span> <br>
+                    <label><input type="radio" name="ears" value="Normal" checked> Normal</label>
+                    <label><input type="radio" name="ears" value="Not Evaluated"> Not Evaluated</label>
+                    <label><input type="radio" name="ears" value="Abnormal"> Abnormal</label>
+                </li>
+                <li data-item="heart"><span>Heart: </span><br>
+                    <label><input type="radio" name="heart" value="Normal" checked> Normal</label>
+                    <label><input type="radio" name="heart" value="Not Evaluated"> Not Evaluated</label>
+                    <label><input type="radio" name="heart" value="Abnormal"> Abnormal</label>
+                </li>
+                <li data-item="respiratory"><span>Respiratory:</span> <br>
+                    <label><input type="radio" name="respiratory" value="Normal" checked> Normal</label>
+                    <label><input type="radio" name="respiratory" value="Not Evaluated"> Not Evaluated</label>
+                    <label><input type="radio" name="respiratory" value="Abnormal"> Abnormal</label>
+                </li>
+                <li data-item="abdomen"><span>Abdomen:</span> <br>
+                    <label><input type="radio" name="abdomen" value="Normal" checked> Normal</label>
+                    <label><input type="radio" name="abdomen" value="Not Evaluated"> Not Evaluated</label>
+                    <label><input type="radio" name="abdomen" value="Abnormal"> Abnormal</label>
+                </li>
+                <li data-item="musculoskeletal"><span>Musculoskeletal:</span> <br>
+                    <label><input type="radio" name="musculoskeletal" value="Normal" checked> Normal</label>
+                    <label><input type="radio" name="musculoskeletal" value="Not Evaluated"> Not Evaluated</label>
+                    <label><input type="radio" name="musculoskeletal" value="Abnormal"> Abnormal</label>
+                </li>
+                <li data-item="lymphNodes"><span>Lymph nodes: </span><br>
+                    <label><input type="radio" name="lymphNodes" value="Normal" checked> Normal</label>
+                    <label><input type="radio" name="lymphNodes" value="Not Evaluated"> Not Evaluated</label>
+                    <label><input type="radio" name="lymphNodes" value="Abnormal"> Abnormal</label>
+                </li>
+                <li data-item="genitourinary"><span>Genitourinary:</span> <br>
+                    <label><input type="radio" name="genitourinary" value="Normal" checked> Normal</label>
+                    <label><input type="radio" name="genitourinary" value="Not Evaluated"> Not Evaluated</label>
+                    <label><input type="radio" name="genitourinary" value="Abnormal"> Abnormal</label>
+                </li>
+                <li data-item="integumentary"><span>Integumentary:</span> <br>
+                    <label><input type="radio" name="integumentary" value="Normal" checked> Normal</label>
+                    <label><input type="radio" name="integumentary" value="Not Evaluated"> Not Evaluated</label>
+                    <label><input type="radio" name="integumentary" value="Abnormal"> Abnormal</label>
+                </li>
+                <li data-item="rectalExam"><span>Rectal exam:</span> <br>
+                    <label><input type="radio" name="rectalExam" value="Normal" checked> Normal</label>
+                    <label><input type="radio" name="rectalExam" value="Not Evaluated"> Not Evaluated</label>
+                    <label><input type="radio" name="rectalExam" value="Abnormal"> Abnormal</label>
+                </li>
+            </ul>
+            <!-- <button id="updateBtn">Update Information</button> -->
+        </div>
+    </div>
+    </section>
+
+    <section class="footer" id="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="index.html#home"><i class="fas fa-chevron-right"></i>home</a>
+                <a href="index.html#services"><i class="fas fa-chevron-right"></i>services</a>
+                <a href="index.html#about"><i class="fas fa-chevron-right"></i>about</a>
+                <a href="book.html"><i class="fas fa-chevron-right"></i>book</a>
+                <a href="index.html#blogs"><i class="fas fa-chevron-right"></i>blogs</a>
+                <a href="loginsignup.html"><i class="fas fa-chevron-right"></i>Sign-up</a>
+            </div>
+
+            <div class="box">
+                <h3>our services</h3>
+                <a href="book.html"><i class="fas fa-chevron-right"></i>appointment</a>
+                <a href="vaccination.html"><i class="fas fa-chevron-right"></i>vaccination</a>
+                <a href="report.html"><i class="fas fa-chevron-right"></i>report-card</a>
+            </div>
+
+            <div class="box">
+                <h3>Contact info</h3>
+                <a href="#"><i class="fas fa-phone"></i>9567890987</a>
+                <a href="#"><i class="fas fa-phone"></i>9567893457</a>
+                <a href="#"><i class="fas fa-envelope"></i>Vetsy@gmail.com</a>
+            </div>
+
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i>facebook</a>
+                <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i>twitter</a>
+                <a href="https://www.instagram.com/accounts/login/"><i class="fab fa-instagram"></i>instagram</a>
+            </div>
+        </div>
+
+        <div class="credit">created by <span>Vetsy</span> all rights reserved</div>
+    </section>
+
+
+    <script src="report.js"></script>
+    <script>
+    
+        var preloader = document.getElementById('loading');
+        var preloader1 = document.getElementsByClassName('wrapper');
+    
+        function myFunction(){
+            preloader.style.display = 'none';
+            preloader1.style.display = 'none';
+    
+        }
+    
+    </script>
+</body>
+</html>
